@@ -2,24 +2,39 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aviator Signal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviator Signal</title>
+<style>
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 80px;
+}
+h1 { color: #ff3b3b; }
+#signal {
+  font-size: 48px;
+  margin: 30px;
+}
+button {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+</style>
 </head>
 <body>
-
-  <h1>AVIATOR SIGNAL</h1>
-  <p id="signal">Waiting for signal...</p>
-
+<h1>AVIATOR SIGNAL</h1>
+<div id="signal">WAIT</div>
 <button onclick="generateSignal()">GET SIGNAL</button>
 
-  <script>
-    function generateSignal() {
-      const signal = (Math.random() * 10 + 1).toFixed(2);
-      document.getElementById("signal").innerHTML =
-        "NEXT SIGNAL: " + signal + "x";
-    }
-  </script>
+<script>
+function generateSignal() {
+  const value = (Math.random() * 10 + 1).toFixed(2);
+  document.getElementById("signal").innerText = value + "x";
+}
+</script>
 
 </body>
 </html>
