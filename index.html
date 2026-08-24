@@ -11,23 +11,48 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 h1 { color: #ff3b3b; }
 #signal {
   font-size: 48px;
   margin: 30px;
 }
-button {
-  font-size: 20px;
-  padding: 15px 30px;
+button, .link-button {
+  display: inline-block;
+  font-size: 18px;
+  padding: 15px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.log {
+  margin: 30px auto;
+  padding: 15px;
+  max-width: 300px;
+  background: #222;
+  border-radius: 10px;
 }
 </style>
 </head>
 <body>
+
 <h1>AVIATOR SIGNAL</h1>
+
 <div id="signal">WAIT</div>
+
 <button onclick="generateSignal()">GET SIGNAL</button>
+
+<div class="log">
+  <h3>Account Details</h3>
+  <p>Account: 12345678</p>
+</div>
+
+<a class="link-button"
+href="https://www.hollywoodbets.net/?btag=a_1241b_c_1d_3682081909"
+target="_blank">
+VISIT HOLLYWOODBETS </a>
 
 <script>
 function generateSignal() {
