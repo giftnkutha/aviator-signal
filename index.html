@@ -1,69 +1,25 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aviator Signal</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 500px;
-      margin: 60px auto;
-      padding: 30px;
-    }
-
-    h1 {
-      color: #ff3b3b;
-    }
-
-    .card {
-      background: #222;
-      padding: 30px;
-      border-radius: 15px;
-      margin-top: 30px;
-    }
-
-    .signal {
-      font-size: 42px;
-      margin: 25px 0;
-      color: #00e676;
-    }
-
-    button {
-      background: #e53935;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 8px;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Aviator Signal</h1>
 
-    <div class="card">
-      <p>Demo signal generator</p>
-      <div class="signal" id="signal">READY</div>
-      <button onclick="generateSignal()">GENERATE SIGNAL</button>
-    </div>
-  </div>
+  <h1>AVIATOR SIGNAL</h1>
+  <p id="signal">Waiting for signal...</p>
+
+<button onclick="generateSignal()">GET SIGNAL</button>
 
   <script>
     function generateSignal() {
-      const value = (Math.random() * 5 + 1).toFixed(2);
-      document.getElementById("signal").innerText = value + "x";
+      const signal = (Math.random() * 10 + 1).toFixed(2);
+      document.getElementById("signal").innerHTML =
+        "NEXT SIGNAL: " + signal + "x";
     }
   </script>
+
 </body>
 </html>
-```
