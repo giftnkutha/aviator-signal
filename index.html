@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviator Live Logger</title>
+</head>
+<body>
+  <h1>AVIATOR LIVE LOGGER</h1>
+  <p id="status">Logger ready</p>
+
+  <h2 id="value">--.--x</h2>
+
+  <button onclick="refreshLog()">REFRESH LOG</button>
+
+  <div id="log">Waiting for authorized data source...</div>
+
+  <script>
+    function refreshLog() {
+      document.getElementById("status").textContent = "Last refreshed: " + new Date().toLocaleTimeString();
+      document.getElementById("log").textContent =
+        "Activity updated locally. Connect an authorized data source for real account data.";
+    }
+  </script>
+</body>
+</html>
 
